@@ -36,9 +36,9 @@ class print(object):
         # pylint: disable=unused-argument
         name, _, content, re_id, _, _, _ = common.extract_message_data(msg)
         # Format a message log record
-        msg_dump_str = '[{}-{:02d}-{:02d} {:02d}:{:02d}] {}{}: {}'.format(
+        msg_dump_str = '[{}-{:02d}-{:02d} {:02d}:{:02d}] {}: {}'.format(
             msg.date.year, msg.date.month, msg.date.day,
-            msg.date.hour, msg.date.minute, msg.id,
+            msg.date.hour, msg.date.minute,
             name, self._py_encode_basestring(content))
 
         return msg_dump_str
