@@ -36,15 +36,12 @@ class print(object):
         # pylint: disable=unused-argument
         name, _, content, re_id, _, _, _ = common.extract_message_data(msg)
         # Format a message log record
-        message_str = ""
         msg_dump_str = '[{}-{:02d}-{:02d} {:02d}:{:02d}] {}: {}'.format(
             msg.date.year, msg.date.month, msg.date.day,
-            msg.date.hour, msg.date.minute,
-            name, self._py_encode_basestring(content))
-        if self._py_encode_basestring(content) :
-            message_str = msg_dump_str 
-        
-        return message_str
+            msg.date.hour, msg.date.minute
+            name, if self._py_encode_basestring(content) : self._py_encode_basestring(content) else : "[media]")
+
+        return msg_dump_str
 
     def begin_final_file(self, resulting_file, exporter_context):
         """ Hook executes at the beginning of writing a resulting file.
