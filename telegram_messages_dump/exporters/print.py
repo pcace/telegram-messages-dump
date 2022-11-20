@@ -41,7 +41,7 @@ class print(object):
        
         msg_dump_str = '[{}-{:02d}-{:02d} {:02d}:{:02d}] {}: {}'.format(
             msg.date.year, msg.date.month, msg.date.day,
-            msg.date.hour, msg.date.minute
+            msg.date.hour, msg.date.minute,
             name, message)
 
         return msg_dump_str
