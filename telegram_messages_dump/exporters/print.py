@@ -40,8 +40,8 @@ class print(object):
             msg.date.year, msg.date.month, msg.date.day,
             msg.date.hour, msg.date.minute,
             name, self._py_encode_basestring(content))
-
-        return msg_dump_str
+        if self._py_encode_basestring(content) :
+            return msg_dump_str 
 
     def begin_final_file(self, resulting_file, exporter_context):
         """ Hook executes at the beginning of writing a resulting file.
