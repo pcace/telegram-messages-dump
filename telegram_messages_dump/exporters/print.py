@@ -1,5 +1,3 @@
-#WIP
-
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # pylint: disable=missing-docstring
@@ -7,7 +5,7 @@
 import re
 from .common import common
 
-class text(object):
+class print(object):
     """ directly print messages.
         By convention it has to be called exactly the same as its file name.
         (Apart from .py extention)
@@ -40,9 +38,9 @@ class text(object):
         # Format a message log record
         msg_dump_str = '[{}-{:02d}-{:02d} {:02d}:{:02d}] {}{}: {}'.format(
             msg.date.year, msg.date.month, msg.date.day,
-            msg.date.hour, msg.date.minute, "RE_ID=%s " % re_id if re_id else "[medien]",
+            msg.date.hour, msg.date.minute, msg.id,
             name, self._py_encode_basestring(content))
-        
+
         return msg_dump_str
 
     def begin_final_file(self, resulting_file, exporter_context):
